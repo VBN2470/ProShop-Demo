@@ -4,7 +4,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../assets/logo.png';
 
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Header = () => {

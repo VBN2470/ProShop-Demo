@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
 import FormContainer from '../../components/FormContainer';
@@ -23,7 +22,7 @@ const ProductEditScreen = () => {
     const [countInStock, setCountInStock] = useState(0);
     const [description, setDescription] = useState('');
 
-    const { data: product, isLoading, refetch, error } = useGetProductDetailsQuery(productId);
+    const { data: product, isLoading, error } = useGetProductDetailsQuery(productId);
 
     const [updateProduct, { isLoading: isUpdateProductLoading }] = useUpdateProductMutation();
 
